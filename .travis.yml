@@ -14,6 +14,7 @@ script:
 deploy:
   provider: script
   script: bash docker_push.sh
-  branches:
-    only:
-    - /.*/
+  on:
+    branches:
+      only:
+      - /.*/
