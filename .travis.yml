@@ -13,6 +13,4 @@ script:
   - docker build -t luislhl/staticman .
 deploy:
   provider: script
-  script: bash docker_push
-  # on:
-  #   branch: master
+  script: bash docker_push.sh
