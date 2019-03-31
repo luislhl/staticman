@@ -10,7 +10,7 @@ node_js:
 - '8.11.3'
 install: true
 script:
-  - docker build -t luislhl/staticman .
+  - docker build -t luislhl/staticman --build-arg GITHUB_TOKEN="$GITHUB_TOKEN" --build-arg RSA_PRIVATE_KEY="$RSA_PRIVATE_KEY" .
   - bash docker_push.sh
 # deploy:
 #   provider: script
